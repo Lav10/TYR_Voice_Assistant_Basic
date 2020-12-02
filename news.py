@@ -43,7 +43,7 @@ combo.grid(column=0, row=2)
 def clicked():
     source = combo.get()
 
-    key = 'a2db1047c0224734af41e95263fb59db'
+    key = '<<Key>>'
 
     api_url = 'https://newsapi.org/v2/top-headlines?sources='+source+'&apiKey=' + key
 

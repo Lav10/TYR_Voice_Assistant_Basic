@@ -27,7 +27,7 @@ def weather():
 
     encodedAddress = simpledialog.askstring("Location Required","Enter the location")
 
-    key = 'AIzaSyAv8ie1sh5s3j3w4DqY23lMk-EYkaTD2Kc'
+    key = '<<Key>>'
 
     api_url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodedAddress + '&key=' + key
 
@@ -38,7 +38,7 @@ def weather():
     lat = data['results'][0]['geometry']['location']['lat']
     lng = data['results'][0]['geometry']['location']['lng']
 
-    key_2 = 'cff7cff3cfc4c4e583128942be8ff5bd'
+    key_2 = '<<Key>>'
 
     ds_url = 'https://api.darksky.net/forecast/' + str(key_2) + '/' + str(lat) + ',' + str(lng)
 
@@ -82,8 +82,7 @@ def wolfram():
 
     window.iconify()
 
-    # app_id = "88JHAG-XEQE8V92XE"
-    app_id = "7AT8HY-63UEWRQHY7"
+    app_id = "<<App_ID>>"
     client = wolframalpha.Client(app_id)
 
     ques = simpledialog.askstring("Query Required", "Please enter some query")
@@ -100,7 +99,7 @@ def wolfram():
 
 def google():
 
-    api_key = 'AIzaSyDFPe6eagT7g8TBgu0Uw0zs3GqvGOXAv4c'
+    api_key = '<<API_Key>>'
     ques = simpledialog.askstring("Query Required", "Please enter some query")
     api_url='https://www.googleapis.com/customsearch/v1?key='+api_key+'&cx=004813015154938053204:qhbukfjnmfq&q='+ques
 
